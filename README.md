@@ -21,6 +21,14 @@ This repo serves as the submission base for the Winter AI War. To enter, create 
 8. Each team will fight in 2 matches Round Robbin style. In addition, each team will fight against Brutal AI and FWBrutal twice.
 ----
 
+# Getting Started
+1. Copy the base files of the game of your choice to `Zero-K/AI/Skirmish`. If you're playing future wars, create two (if you do not have FWBrutal already). You should have a folder like this: `Zero-K/AI/Skirmish/MyAIName/stable`
+2. Rename the folder to whatever you'd like. I don't think spaces work, but whatever?
+3. Update the AIInfo.lua's `shortName` field to match the folder name.
+4. Create `devmode` as a text file in your Zero-K folder.
+5. Disable `Simplified AI List` in the Zero-K Lobby Settings under the `Developer` tab.
+6. You're ready to go! Everything you'll probably want to change is in `/config`.
+
 Deadline for submissions: December 20th! Have fun. Feel free to join #Modding or #AI to collaborate and ask questions.
 
 Good luck, have fun.
