@@ -9,8 +9,9 @@ This repo serves as the submission base for the Winter AI War. To enter, create 
 3. You may challenge other trainers to an AI Duel during testing or peak into their games for intel gathering. You may also metagame through the github files here.
 4. You may not create separate configurations per match!
 5. There will be exhibition matches (unranked) every 2 weeks. Please have your files ready by then. PRs will be approved as they can be.
+6. Your submission may not use LOS Cheats.
 
-6. You will be ranked in the finals based on your wins and losses:
+7. You will be ranked in the finals based on your wins and losses:
 
         Win Against another AI Team: +2pts ✔️
         Win Against FWBrutal/Brutal AI: +1pt ✔️
