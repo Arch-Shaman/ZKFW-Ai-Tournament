@@ -13,8 +13,7 @@ This repo serves as the submission base for the Winter AI War. To enter, create 
 
 7. You will be ranked in the finals based on your wins and losses:
 
-        Win Against another AI Team: +2pts ✔️
-        Win Against FWBrutal/Brutal AI: +1pt ✔️
+        Win: +2pts ✔️
         Loss: -1 pt. ❌
         Draw (match goes beyond 45:00) : 0pts for both teams. 🏳️
 
