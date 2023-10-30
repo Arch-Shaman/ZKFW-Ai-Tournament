@@ -29,6 +29,9 @@ This repo serves as the submission base for the Winter AI War. To enter, create 
 5. Disable `Simplified AI List` in the Zero-K Lobby Settings under the `Developer` tab.
 6. You're ready to go! Everything you'll probably want to change is in `/config`.
 
+# Submitting work
+You'll need to create a PR here or give me the files via discord. Every 2 weeks, we will have an exhibition match, be sure you have your files up to date!
+
 Deadline for submissions: December 20th! Have fun. Feel free to join #Modding or #AI to collaborate and ask questions.
 
 Good luck, have fun.
