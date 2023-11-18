@@ -1,0 +1,53 @@
+// Mono-space font required
+{
+  "default": "ai",
+  "version": "0.1",
+  "ai": "F:\SteamLibrary\steamapps\common\Zero-K\AI\Skirmish\SkelTESTAI",
+  "options": {
+    "greed": true,
+    "greed_code": "
+{
+    \"energy\": {
+        \"start_factor\": 1.3,
+        \"end_factor\": 1.3,
+        \"factor_growth_rate\": 0.1,
+        \"land_limits\": {
+            \"energysingu\": [0.1, 0.3],
+            \"energygeo\": [0.1, 0.3],
+            \"energyfusion\": [0.1, 0.3],
+            \"energywind\": [0.1, 0.3],
+            \"energysolar\": [0.1, 0.3]
+        },
+        \"water_limits\": {
+            \"energywater\": [0.1, 0.3],
+            \"energytidal\": [0.1, 0.3]
+        }
+    },
+    \"economy\": {
+        \"eps_step\": 0.02,
+        \"mex_max\": 1,
+        \"switch\": {
+            \"land_factory\": 180,
+            \"water_factory\": 180
+        }
+    },
+    \"ms_pull\": {
+        \"mobile\": 1,
+        \"static\": 1
+    },
+    \"build_delay\": 0.2,
+    \"pylon\": {
+        \"order\": [\"energypylon\"],
+        \"units\": {
+            \"energypylon\": 1
+        }
+    },
+    \"definitions\": {
+        \"terraunit\": \"terraunit\",
+        \"staticrearm\": \"staticrearm\",
+        \"turretmissile\": \"turretmissile\"
+    }
+}"
+  }
+}
+
