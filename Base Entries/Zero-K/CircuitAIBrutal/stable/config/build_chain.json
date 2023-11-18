@@ -7,12 +7,12 @@
 		"turretaalaser", "staticcon", "turretheavy", "staticshield", "turretemp",
 	//       10             11               12            13                14
 		"turretantiheavy", "staticarty", "turretaafar", "turretaaheavy", "turretgauss",
-	//       15		        16
-		"staticantinuke", "staticheavyradar"
+	//       15
+		"staticantinuke"
 	],
 	// Actual number of defences per cluster bounded by income
-	"land":  [0, 0, 1, 3, 5, 1, 2, 14, 1, 9, 5, 6, 2, 3, 5, 0, 8, 9, 14, 1, 3, 6, 16, 12, 11, 13],
-	"water": [4, 1, 6, 4, 4, 3, 5, 9, 16],
+	"land":  [0, 0, 1, 3, 5, 1, 2, 14, 1, 9, 5, 6, 2, 3, 5, 0, 8, 9, 14, 1, 3, 6, 12, 11, 13],
+	"water": [4, 1, 6, 4, 4, 3, 5, 9],
 	"prevent": 1,  // number of preventive defences
 	"amount": {  // income bound factor
 		"offset": [-0.15, 0.4],
@@ -23,7 +23,7 @@
 
 
 	// Base defence and time to build it, in seconds
-	"base": [[0, 10], [1, 300], [0, 310], [1, 400], [6, 450], [0, 500], [16, 600], [5, 660], [1, 990], [5, 1160], [1, 1380], [2, 1680], [13, 1800], [15, 1850]],
+	"base": [[0, 10], [1, 300], [0, 310], [1, 400], [6, 450], [0, 500], [5, 660], [1, 990], [5, 1160], [1, 1380], [2, 1680], [13, 1800], [15, 1850]],
 
 	"superweapon": {
 		"unit":   ["raveparty", "staticnuke", "staticheavyarty", "zenith", "mahlazer", "staticantinuke"],  // FIXME: last aren't superweapon
@@ -236,5 +236,4 @@
 				]]
 		}
 	}
-}
 }
