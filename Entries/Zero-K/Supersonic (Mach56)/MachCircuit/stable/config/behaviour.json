@@ -683,7 +683,7 @@
 		"retreat": 0.6,
 		"pwr_mod": 0.01,
 		"thr_mod": 0.01
-	}
+	},
 	"bomberdisarm": {
 		"role": ["anti_heavy", "air"],
 		"attribute": ["siege", "bomber"],
@@ -709,7 +709,7 @@
 		"retreat": 0.95,
 		"pwr_mod": 0.75,
 		"thr_mod": 0.1
-	}
+	},
 	"planescout": {
 		"role": ["scout", "air"],
 		"since": 360,
@@ -718,7 +718,6 @@
 	},
 	"planelightscout": {
 		"role": ["scout", "air"],
-		"attribute": ["boost"],
 		"limit": 0,
 		"retreat": 0.8,
 	},
@@ -808,7 +807,7 @@
 		"role": ["riot"]
 	},
 	"shipskirm": {
-		"role": ["skirmish"]
+		"role": ["skirmish"],
 		"retreat": 0.5
 	},
 	"shipassault": {

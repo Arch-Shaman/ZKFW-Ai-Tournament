@@ -51,7 +51,7 @@
 					"factoryjump": [
 						[0.5, ["scout", "scout", "raider", "scout","builder", "scout", "raider"]],
 						[0.5, ["scout", "scout", "scout", "scout", "builder", "raider", "scout", "raider"]]
-					]
+					],
 					"factoryship": [
 						[0.6, ["scout", "raider", "builder"]],
 						[0.4, ["anti_sub", "builder"]] // siren rush
