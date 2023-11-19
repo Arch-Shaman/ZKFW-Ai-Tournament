@@ -24,7 +24,7 @@
 		},
 		"water": {
 			"energysingu": [1],
-			"energygeo": [0],
+			"energygeo": [0, 2],
 			"energyfusion": [4],
 			"energywind": [20],
 			"energysolar": [8, 12]
