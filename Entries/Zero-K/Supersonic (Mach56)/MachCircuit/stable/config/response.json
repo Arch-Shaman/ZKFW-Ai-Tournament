@@ -10,13 +10,13 @@
 
 	"assault": {
 		"vs":         ["riot", "static", "assault", "commander", "heavy", "super", "missileskirm", "turtle", "anti_sub"],
-		"ratio":      [ 0.75,   2.0,      0.00,      0.20,        0.00,    0.75,    1.5,            3.0,      0.75],
+		"ratio":      [ 0.75,   2.0,      0.00,      0.20,        0.00,    0.75,    1.5,            3.0,     0.75],
 		"importance": [ 15.00,  45.00,    25.00,     75.00,       0.00,    45.00,   125.00,         50.0,     15.00],
 		"max_percent": 1.00
 	},
 	"skirmish": {
 		"vs":         ["riot", "static", "assault", "commander", "heavy", "anti_heavy", "anti_sub"],
-		"ratio":      [ 1.50,   0.75,     1.00,      0.10,        0.00,    0.00,         1.50],
+		"ratio":      [ 1.50,   0.75,     1.00,      0.00,        0.00,    0.00,         1.50],
 		"importance": [ 35.00,  25.00,    25.00,     75.00,       0.00,    0.00,         35.00],
 		"max_percent": 1.00
 	},
@@ -69,10 +69,10 @@
 		"max_percent": 0.4,
 		"eps_step": 0.75
 	},
-	"anti_sub": { // affectively just anti-sub riots at the moment
-		"vs":         ["sub", "raider", "scout", "bullshit_raider"],
-		"ratio":      [ 0.8,   1.2,      1.2,     2.0],
-		"importance": [ 75.0,  25.0,     25.0,    40.0],
+	"anti_sub": { // want to underbuild this a little to prevent too much of it
+		"vs":         ["sub"],
+		"ratio":      [ 0.8],
+		"importance": [ 75.0],
 		"max_percent": 0.3,
 		"eps_step": 0.25
 	},

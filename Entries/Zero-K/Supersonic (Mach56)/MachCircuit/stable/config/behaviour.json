@@ -244,8 +244,8 @@
 		"retreat": 0.25  // pretty disposable
 	},
 	"amphimpulse": {
-		"role": ["riot", "raider"],
-		"limit": 6,
+		"role": ["riot"],
+		"limit": 1,
 		"retreat": 0.36,
 		"pwr_mod": 2.25,
 		"thr_mod": 2.25
@@ -261,8 +261,7 @@
 	"amphriot": {
 		"role": ["riot"],
 		"attribute": ["melee", "ret_fight"],
-		"limit": 4,
-		"pwr_mod": 1.4,
+		"pwr_mod": 1.5,
 		"retreat": 0.35 // too slow to be retreating all the time
 	},
 	"amphassault": {
@@ -296,7 +295,6 @@
 		"role": ["riot"],
 		"attribute": ["melee", "mine"],
 		"limit": 1,
-		"pwr_mod": 1.4,
 		"retreat": 0.01
 	},
 
@@ -344,6 +342,7 @@
 		"thr_mod": 2.5,
 		"pwr_mod": 2.5,
 		"since": 300,
+		"thr_mod": 1.0
 	},
 	"spiderantiheavy": {
 		"role": ["anti_heavy", "mine"],
@@ -588,6 +587,8 @@
 		"attribute": ["melee"],		
 		"pwr_mod": 0.9,
 		"thr_mod": 0.8,
+		"pwr_mod": 0.9,
+		"thr_mod": 0.9,
 		"limit": 4,
 		"retreat": 0.5
 	},
@@ -650,7 +651,7 @@
 		"role": ["scout", "air"],
 		"attribute": ["boost"],
 		"pwr_mod": 1.5,
-		"limit": 2,
+		"limit": 1,
 		"thr_mod": 3.0,
 		"retreat": 0.8
 	},
@@ -677,18 +678,11 @@
 		"pwr_mod": 0.01,
 		"thr_mod": 0.01
 	},
-	"bomberstrike" : {
-		"role": ["bomber", "air"],
-		"limit": 10,
-		"retreat": 0.6,
-		"pwr_mod": 0.01,
-		"thr_mod": 0.01
-	}
 	"bomberdisarm": {
 		"role": ["anti_heavy", "air"],
 		"attribute": ["siege", "bomber"],
 		"limit": 2,
-		"since": 300,
+		"since": 1200,
 		"retreat": 0.95,
 		"pwr_mod": 100.00,
 		"thr_mod": 0.01
@@ -702,14 +696,6 @@
 		"pwr_mod": 0.75,
 		"thr_mod": 0.1
 	},
-	"bomberassault" : {
-		"role": ["bomber", "air"],  // FIXME: should act as anti_heavy?
-		"limit": 1,
-		"since": 420,
-		"retreat": 0.95,
-		"pwr_mod": 0.75,
-		"thr_mod": 0.1
-	}
 	"planescout": {
 		"role": ["scout", "air"],
 		"since": 360,
@@ -718,8 +704,7 @@
 	},
 	"planelightscout": {
 		"role": ["scout", "air"],
-		"attribute": ["boost"],
-		"limit": 0,
+		"limit": 1,
 		"retreat": 0.8,
 	},
 
@@ -751,7 +736,7 @@
 		"retreat": 0.55
 	},
 	"tankassault": {
-		"role": ["assault", "heavy"],
+		"role": ["assault", "heavy", "anti_sub"],
 		"attribute": ["melee"],
 		"retreat": 0.55,
 		"pwr_mod": 0.85,
@@ -795,8 +780,7 @@
 		"role": ["builder"]
 	},
 	"shipscout": {
-		"role": ["scout"],
-		"limit": 2
+		"role": ["scout"]
 	},
 	"shiptorpraider": {
 		"role": ["raider"]
@@ -809,10 +793,9 @@
 	},
 	"shipskirm": {
 		"role": ["skirmish"]
-		"retreat": 0.5
 	},
 	"shipassault": {
-		"role": ["anti_sub", "assault"],
+		"role": ["assault"],
 		"attribute": ["melee"]
 	},
 	"shiparty": {
@@ -864,21 +847,21 @@
 		"thr_mod": 0.0
 	},
 	"striderbantha": {
-		"role": ["heavy", "support"],
+		"role": ["heavy", "support", "heavy"],
 		"attribute": ["melee"],
 		"retreat": 0.6,
 		"pwr_mod": 0.5,
 		"thr_mod": 0.5
 	},
 	"striderdetriment": {
-		"role": ["heavy", "support"],
+		"role": ["heavy", "support", "heavy"],
 		"attribute": ["melee"],
 		"retreat": 0.50,  // deffo retreat, running into nab annihlator farm and sploding is silly :)
 		"pwr_mod": 0.34,
 		"thr_mod": 0.34
 	},
 	"subtacmissile": {
-		"role": ["artillery", "heavy", "sub"],
+		"role": ["artillery", "heavy"],
 		"attribute": ["stockpile"]
 	},
 	"shipcarrier": {
@@ -932,7 +915,7 @@
 		"thr_mod": 1.00
 	},
 	"turretantiheavy": {
-		"role": ["static", "turtle"],
+		"role": ["static", "turtle", "static"],
 		"thr_mod": 0.55
 	},
 	"staticarty": {
