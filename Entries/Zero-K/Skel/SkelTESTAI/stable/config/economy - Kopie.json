@@ -1,0 +1,83 @@
+// Mono-space font required
+{
+"economy": {
+	"energy": {
+		
+		"land": {
+			"energysingu": [10],
+			"energygeo": [0, 5],
+			"energyfusion": [3, 3],
+			"energywind": [20, 30],
+			"energysolar": [100, 200] 
+		},
+		"water": {
+			"energysingu": [1],
+			"energygeo": [0],
+			"energyfusion": [4],
+			"energywind": [20],
+			"energysolar": [50, 150] 
+		},
+		"factor": [[0.25, 1], [10.0, 1600]], 
+
+		"pylon": ["energywind", "energysolar", "energyfusion", "energypylon"] 
+	},
+	"eps_step": 0.4,
+
+	
+	"buildpower": 1.45,
+	
+	"excess": -1.0,
+	
+	
+
+	"ms_pull": [[2.0, 0.0], [0.45, 0.20], [0.99, 0.90]],
+	
+	
+	"mex_max": 4.0,  
+	
+	"build_delay": [[-1.0, 0], [-1.0, 0]],
+
+	
+	
+	"switch": [800, 850],
+
+	"terra": "terraunit",
+	"airpad": "staticrearm",
+
+	
+	"default": "turretmissile"
+}
+}
+function buildEnergyFusion() {
+  let allyMexCount = 0;
+
+  // Count the number of allied staticmex units
+  for (const unitID in Game.units) {
+    let unit = Game.units[unitID];
+    if (unit.constructor.name === "StaticMex" && unit.team === Game.playerTeam) {
+      allyMexCount++;
+    }
+  }
+
+  if (allyMexCount >= 8) {
+    // Build energyfusion
+    Game.buildUnit("energyfusion", x, y, z);
+  }
+}
+
+function onUnitDestroyed(unitID) {
+  const unit = Game.units[unitID];
+  if (unit.hasOwnProperty("constructor") && unit.constructor.name === "StaticMex" && unit.team === Game.playerTeam) {
+    // Delay checking and building energyfusion in case an ally staticmex is destroyed
+    unit.reclaimable = false;
+    unit.neutral = true;
+    unit.alwaysVisible = false;
+    unit.blocking = false;
+
+    const { x, y, z } = unit.position;
+    Game.addCallback(buildEnergyFusion, 0, "unitFinished", null, x, z);
+  }
+}
+
+// Add the onUnitDestroyed callback to the appropriate event listener 
+Game.on("unitDestroyed", onUnitDestroyed);
