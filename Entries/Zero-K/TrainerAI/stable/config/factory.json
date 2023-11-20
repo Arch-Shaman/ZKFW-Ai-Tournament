@@ -1,0 +1,75 @@
+// Mono-space font required
+{
+// Factory selection parameters
+"select": {
+	"air_map": 80,
+	"offset": [-20, 20],
+	// Speed factor: 8x8 ~ 0%, 24x24 ~ 40%
+	"speed": [0, 40],
+	"map": [8, 24],
+	"no_air": 3
+},
+
+// Utility param: warning on unit's total probability not equal to 100%
+"warn_probability": true,
+
+// Define factories
+"factory": {
+	"factorycloak": {
+		// Adjusts the priority of factory choice (factories with map_percent < 20 are ignored)
+		// map_percent is [20..100]
+		// On start:
+		//   if factory has available builder in current frame: priority ~= map_percent * importance0 + random(-20..+20)
+		//   if factory's builder unavailable in current frame: priority ~= map_percent * importance0 / 10 + random(-20..+20)
+		// During game: priority ~= map_percent * importance1 + random(-20..+20)
+		// importanceN = 1.0 by default if not set
+		"importance": [0.78, 0.2],
+
+		// 'require_energy' adds energy requirement for tierN (N>0): fallback to lowest tier on low energy
+		"require_energy": true,
+
+		// If income*ecoFactor < income_tier[N] then 'tierN' probability will be used
+		"income_tier": [20,40],
+
+		//             conjurer,   glaive,      scythe,           rocko,        warrior,     zeus,           hammer,      sniper,       tick,        eraser,        gremlin
+		"unit":      ["cloakcon", "cloakraid", "cloakheavyraid", "cloakskirm", "cloakriot", "cloakassault", "cloakarty", "cloaksnipe", "cloakbomb", "cloakjammer", "cloakaa"],
+
+		"land": {
+			// 0-8m Opening - Glaives & Warriors most important for scouting, map control and defence.
+			"tier0": [ 0.10,       0.85,        0.00,             0.00,         0.05,        0.00,           0.00,        0.00,         0.00,        0.00,          0.00],
+
+			// 9-16m Early Game - Map control still important but move towards Scythe raiding and Riot defense from raider balls.
+			"tier1": [ 0.10,       0.80,        0.00,             0.00,         0.05,        0.00,           0.00,        0.05,         0.00,        0.00,          0.00],
+
+			// 17-24m Expanding - Good size terriotiry now, so less scouting and begin producing a little assault/arty on the side.
+	//		"tier2": [ 0.25,       0.01,        0.20,             0.20,         0.03,        0.00,           0.00,        0.20,         0.00,        0.11,          0.00]
+
+			// 25-32m Expansions meet - Economy can afford to begin producing in bulk so unit compositions alter.
+	//		"tier3": [ 0.10,       0.40,        0.05,             0.30,         0.00,        0.10,           0.00,        0.00,         0.00,        0.05,          0.00],
+
+			// 33m -40m Solid Fronts - Now we stop raiding and start pushing.
+	//		"tier4": [ 0.10,       0.35,        0.10,             0.30,         0.00,        0.10,           0.00,        0.00,         0.00,        0.05,          0.00],
+
+			// 41m - 56m Mid Game - we must have 2 facs by now, stop making balanced compositions and start being abusive.
+	//		"tier5": [ 0.10,       0.05,        0.25,             0.10,         0.00,        0.20,           0.10,        0.00,         0.00,        0.10,          0.00],
+
+			// 57m - 72m Late Game - we must have 2 facs & Striders by now, go nuts!
+	//		"tier6": [ 0.10,       0.00,        0.65,             0.00,         0.00,        0.00,           0.00,        0.15,         0.00,        0.10,          0.00],
+
+			// 72m - inf+ Late late Game - This fac sucks!
+	//		"tier7": [ 0.10,       0.00,        0.65,             0.00,         0.00,        0.00,           0.00,        0.15,         0.00,        0.10,          0.00]
+		},
+		"air": {
+			// 0-8m Opening - Glaives & Warriors most important for scouting, map control and defence.
+			"tier0": [ 0.10,       0.54,        0.26,             0.00,         0.00,        0.00,           0.00,        0.00,         0.00,        0.00,          0.10],
+
+			// 9-16m Early Game - Map control still important but move towards Scythe raiding and Riot defense from raider balls.
+			"tier1": [ 0.10,       0.25,        0.11,             0.38,         0.00,        0.06,           0.00,        0.00,         0.00,        0.00,          0.10],
+
+			// 17-24m Expanding - Good size terriotiry now, so less scouting and begin producing a little assault/arty on the side.
+			"tier2": [ 0.20,       0.10,        0.10,             0.33,         0.00,        0.12,           0.00,        0.00,         0.00,        0.05,          0.10]
+		},
+		"caretaker": 6
+	},
+}
+}
