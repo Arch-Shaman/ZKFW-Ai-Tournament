@@ -52,6 +52,7 @@
 		// "siege" - mostly use fight command instead of move
 		// "ret_hold" - hold fire on retreat
 		// "ret_fight" - fight on retreat
+		// in addition any roles here mean that the unit counts as metal for the role for the ai building it
 //		"attribute": ["boost", "no_strafe"],
 
 		// Fire state (open by default)
@@ -83,7 +84,6 @@
 	"cloakraid": {
 		"role": ["raider", "scout"],
 		"attribute": ["scout"],
-		"retreat": 0.1,
 		"pwr_mod": 0.9,
 		"thr_mod": 0.75
 	},
@@ -367,8 +367,8 @@
 		"retreat": 1.3
 	},
 	"shieldscout": {
-		"role": ["transport", "raider"],
-		"limit": 20,
+		"role": ["scout", "raider"],
+		"limit": 10,
 		"attribute": ["siege", "melee"],
 		"pwr_mod": 0.11,
 		"thr_mod": 0.1,
@@ -409,6 +409,7 @@
 	},
 	"shieldfelon": {
 		"role": ["heavy", "shieldball", "snipe_target"],
+		"attribute": ["riot"],
 		"since": 420,
 		"retreat": 0.35,
 		"pwr_mod": 1.1,
@@ -520,7 +521,7 @@
 	"jumpscout": {
 		"role": ["riot", "raider"],
 		"limit": 15,
-		"attribute": ["melee", "siege"],
+		"attribute": ["melee", "siege", "scout"],
 		"retreat": 0
 	},
 	"jumpraid": {
@@ -615,7 +616,7 @@
 	},
 	"hoverdepthcharge": {
 		"role": ["anti_sub", "riot"],
-		"attribute": ["melee"],
+		"attribute": ["melee", "riot"],
 		"retreat": 0.6
 	},
 	"hoverriot": {
@@ -807,12 +808,11 @@
 		"role": ["riot"]
 	},
 	"shipskirm": {
-		"role": ["skirmish"],
-		"retreat": 0.5
+		"role": ["skirmish"]
 	},
 	"shipassault": {
 		"role": ["anti_sub", "assault"],
-		"attribute": ["melee"]
+		"attribute": ["melee", "riot", "assault"]
 	},
 	"shiparty": {
 		"role": ["artillery"]
@@ -881,7 +881,8 @@
 		"attribute": ["stockpile"]
 	},
 	"shipcarrier": {
-		"role": ["artillery", "heavy"]
+		"role": ["artillery", "heavy"],
+		"attribute": ["stockpile"]
 	},
 	"shipheavyarty": {
 		"role": ["artillery", "heavy"]
@@ -1041,7 +1042,7 @@
 	},
 	"staticstorage": {
 		"role": ["mine", "turtle"],
-		"limit": 5
+		"limit": 2
 	},
 	"energysolar": {
 		"role": ["mine"]

@@ -39,7 +39,7 @@
 		},
 		"solar": {
 			"type": ["circle", "engy_low"],
-			"ignore": ["mex", "engy_mid", "engy_high", "def_low", "pylon", "nano"],
+			"ignore": ["mex", "def_low", "pylon", "nano"],
 			"radius": 7
 		},
 		"wind": {
@@ -48,7 +48,7 @@
 			// Available string values: explosion, expl_ally
 //			"radius": "explosion",  // default: "explosion"
 			"radius": 4,
-			"not_ignore": ["factory", "engy_low", "terra"]
+			"ignore": ["mex", "def_low", "pylon", "nano"],
 		},
 		"fusion": {
 			"type": ["circle", "engy_mid"],
@@ -129,7 +129,7 @@
 		"mex": ["staticmex"],
 		"def_low": ["turretmissile", "turretlaser", "staticarty"],
 		"caretaker": ["staticcon", "staticrearm"],
-		"superweapon": ["raveparty", "staticnuke", "zenith", "mahlazer", "turretaaheavy", "staticheavyarty", "staticantinuke", "staticheavyradar"],
+		"superweapon": ["raveparty", "staticnuke", "zenith", "mahlazer", "turretaaheavy", "staticheavyarty", "staticantinuke"],
 //		"protector": ["staticantinuke"],
 //		"terraform": ["terraunit"],
 		"strider": ["striderantiheavy", "striderscorpion", "striderdante", "striderarty", "striderfunnelweb", "striderbantha", "striderdetriment", "subtacmissile", "shipcarrier", "shipheavyarty"],
