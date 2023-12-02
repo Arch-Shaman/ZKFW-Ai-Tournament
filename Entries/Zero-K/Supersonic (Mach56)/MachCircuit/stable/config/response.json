@@ -42,9 +42,9 @@
 		"eps_step": 0.25
 	},
 	"transport": {
-		"vs":         ["super", "support", "shieldball"],
-		"ratio":      [ 0.75,    0.75,      0.75],
-		"importance": [ 50.00,   50.00,     50.00],
+		"vs":         ["super", "support", "shieldball", "static"],
+		"ratio":      [ 0.75,    0.75,      0.75,         0.75],
+		"importance": [ 50.00,   50.00,     50.00,        50.00],
 		"max_percent": 0.30,
 		"eps_step": 0.015
 	},
@@ -71,9 +71,9 @@
 	},
 	"anti_sub": { // affectively just anti-sub riots at the moment
 		"vs":         ["sub", "raider", "scout", "bullshit_raider"],
-		"ratio":      [ 0.8,   1.2,      1.2,     2.0],
+		"ratio":      [ 0.6,   1.0,      1.0,     1.8],
 		"importance": [ 75.0,  25.0,     25.0,    40.0],
-		"max_percent": 0.3,
+		"max_percent": 0.45,
 		"eps_step": 0.25
 	},
 	"anti_heavy": {

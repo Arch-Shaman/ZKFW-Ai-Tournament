@@ -13,7 +13,7 @@
 				"factory": {
 					"factorycloak": [
 						// [<weight>, [<role>, <role>, ...]]
-						[0.9, ["builder", "raider", "raider", "raider", "raider", "raider", "raider", "raider", "raider"]],
+						[0.9, ["raider", "raider", "raider", "raider", "builder", "raider", "raider", "raider", "raider"]],
 						[0.1, ["raider", "builder", "riot", "builder", "raider", "raider", "raider", "raider", "raider", "raider"]]
 					],
 					"factorygunship": [
@@ -33,8 +33,7 @@
 						[0.1, ["builder", "raider", "raider", "scout",  "skirmish", "builder", "skirmish", "scout"]]
 					],
 					"factoryplane": [
-						[0.5, ["anti_air", "builder", "anti_air", "anti_air"]],
-						[0.5, ["anti_air", "builder", "anti_air", "builder"]]
+						[1.0, ["builder"]]
 					],
 					"factorytank": [
 						[0.5, ["builder", "scout", "scout", "raider"]],
@@ -53,8 +52,8 @@
 						[0.5, ["scout", "scout", "scout", "scout", "builder", "raider", "scout", "raider"]]
 					],
 					"factoryship": [
-						[0.6, ["scout", "raider", "builder"]],
-						[0.4, ["anti_sub", "builder"]] // siren rush
+						[0.6, ["scout", "raider", "builder", "raider"]],
+						[0.4, ["riot", "builder"]]
 					]
 				},
 				"default": ["riot", "raider", "builder"]
@@ -67,17 +66,17 @@
 					[10, 48],  // Light particle beam, Nano
 					[39, 48],  // Health, Nano
 					[15, 47, 42],  // Heavy particle beam, range, health
-					[36, 36, 36],  // companion drones
-					[37, 37, 37],  // battle drones
-					[37, 37, 36],  // battle drones, companion drones
 					[36, 46, 46],  // companion drones, speed
+					[37, 37, 37],  // battle drones
+					[37, 37, 30],  // battle drones, jammer
+					[48, 28, 36],  // nano, disruptor ammo, companion drones
+					[33, 34, 44],  // area cloak, lazarus, damage
+					[36, 36, 36],  // companion drones
 					[46, 46, 46],  // speed
 					[42, 42, 42],  // health
 					[42, 39, 44],  // health, regen, damage
 					[39, 39, 39],  // regen
 					[48, 48, 48],  // nano
-					[48, 28, 30],  // nano, disruptor ammo, jammer
-					[33, 34, 44],  // area cloak, lazarus, damage
 					[47, 47, 47],  // range
 					[47, 43, 43],  // range, high density
 					[43, 43, 43],  // high density
@@ -95,7 +94,7 @@
 		},
 		"recon": {
 			// Choice importance, 0 by default
-			"importance": 0.65,
+			"importance": 0.45,
 
 			// Starting units (order matters)
 			"start": {
@@ -122,8 +121,7 @@
 						[0.5, ["builder", "raider", "raider", "scout", "skirmish", "skirmish"]]
 					],
 					"factoryplane": [
-						[0.5, ["anti_air", "builder", "anti_air", "anti_air"]],
-						[0.5, ["anti_air", "builder", "anti_air", "builder"]]
+						[1.0, ["builder"]]
 					],
 					"factorytank": [
 						[0.5, ["builder", "scout", "scout", "raider", "raider",  "raider"]],
@@ -140,6 +138,10 @@
 					"factoryjump": [
 						[0.5, ["builder", "scout", "scout", "raider", "builder", "scout", "raider"]],
 						[0.5, ["builder", "scout", "scout", "scout", "builder", "scout", "raider", "scout", "raider"]]
+					],
+					"factoryship": [
+						[0.6, ["scout", "raider", "builder"]],
+						[0.4, ["anti_sub", "builder"]]
 					]
 				},
 				"default": ["raider", "raider", "builder"]
@@ -150,17 +152,17 @@
 				"time": 240,  // Force-morph delay, in seconds
 				"module": [  // List of dynamic module IDs
 					[8, 42],  // Machinegun, health
-					[42, 39],  // Cloak, Regen
+					[32, 39],  // Cloak, Regen
 					[20, 43, 44],  // disruptor bomb, high density, damage boost
-					[36, 36, 36],  // companion drones
+					[45, 42, 45],  // speed, health
+					[45, 42, 39],  // speed, health, regen
 					[36, 36, 45],  // companion drones, speed
-					[45, 42, 45],  // speed
-					[45, 42, 39],  // speed, health
+					[36, 36, 36],  // companion drones
 					[42, 42, 42],  // health
 					[39, 39, 39],  // regen
 					[39, 50, 50],  // regen, builder
 					[50, 50, 50],  // builder
-					[43, 28, 30],  // radar, disruptor ammo, jammer
+					[43, 28, 30],  // high density, disruptor ammo, jammer
 					[47, 47, 47],  // range
 					[47, 47, 44],  // range, damage
 					[44, 44, 44],  // damage
@@ -178,7 +180,7 @@
 		},
 		"assault": {
 			// Choice importance, 0 by default
-			"importance": 0.25,
+			"importance": 0.45,
 
 			// Starting units (order matters)
 			"start": {
@@ -189,8 +191,8 @@
 						[0.2, ["raider", "builder", "riot", "builder", "raider", "raider", "raider", "raider"]]
 					],
 					"factorygunship": [
-						[0.5, ["support", "support", "support", "support", "skirmish", "skirmish", "support", "skirmish", "skirmish"]],
-						[0.5, ["anti_heavy"]]
+						[0.8, ["support", "support", "support", "support", "skirmish", "skirmish", "support", "skirmish", "skirmish"]],
+						[0.2, ["scout", "support", "builder","support", "skirmish", "skirmish", "support", "skirmish", "skirmish"]]
 					],
 					"factoryamph": [
 						[0.2, ["builder", "riot", "builder", "raider", "raider", "raider", "raider", "raider"]],
@@ -203,19 +205,18 @@
 					],
 					"factoryhover": [
 						[0.5, ["builder", "raider", "raider", "raider", "raider", "builder", "raider", "raider", "raider", "raider", "raider", "builder"]],
-						[0.5, ["builder", "scout", "raider", "raider", "raider", "builder", "scout", "builder", "skirmish", "skirmish"]]
+						[0.5, ["scout", "scout", "scout", "scout", "builder", "scout", "builder", "skirmish", "skirmish"]]
 					],
 					"factoryplane": [
-						[0.5, ["anti_air", "builder", "anti_air", "anti_air"]],
-						[0.5, ["anti_air", "builder", "anti_air", "builder"]]
+						[1.0, ["builder"]]
 					],
 					"factorytank": [
-						[0.5, ["riot", "builder", "assault", "builder", "assault", "builder", "builder", "heavy"]],
+						[0.5, ["riot", "builder", "raider", "builder", "assault", "builder", "builder", "heavy"]],
 						[0.25, ["raider", "builder", "raider", "builder", "raider", "raider", "raider", "builder", "assault"]],
-						[0.25, ["builder", "riot", "builder", "riot", "assault", "builder", "assault"]]
+						[0.25, ["builder", "raider", "builder", "riot", "assault", "builder", "assault"]]
 					],
 					"factoryspider": [
-						[0.5, ["scout", "scout", "scout", "builder", "scout", "scout", "scout", "riot", "scout", "builder", "scout", "riot", "scout", "builder"]],
+						[0.5, ["scout", "scout", "scout", "scout", "scout", "builder", "scout", "riot", "scout", "builder", "scout", "riot", "scout", "builder"]],
 						[0.5, ["scout", "scout", "scout", "scout", "scout", "scout", "scout", "scout", "scout", "scout", "scout", "scout", "builder", "riot", "scout", "builder", "support"]]
 					],
 					"factoryshield": [
@@ -225,6 +226,10 @@
 					"factoryjump": [
 						[0.5, ["scout", "scout", "raider", "scout", "builder", "assault"]],
 						[0.5, ["scout", "scout", "builder", "raider", "scout", "raider", "builder", "raider"]]
+					],
+					"factoryship": [
+						[0.6, ["scout", "raider", "builder"]],
+						[0.4, ["anti_sub", "builder"]]
 					]
 				},
 				"default": ["raider", "raider", "builder"]
@@ -234,23 +239,23 @@
 			"upgrade": {
 				"time": 420,  // Force-morph delay, in seconds
 				"module": [  // List of dynamic module IDs
-					[12],  // shotgun
-					[25, 40],  // shield, health
-					[59, 47, 47],  // Double Riot, range
-					[41, 47, 47],  // high density, range
-					[39, 47, 39],  // regen, range, regen
-					[44, 44, 44],  // damage
-					[44, 44, 26],  // damage, area shield
-					[27, 30, 46],  // napalm, jammer, speed
-					[36, 36, 36],  // companion drones
-					[36, 36, 46],  // companion drones, speed
-					[46, 46, 41],  // speed, high density
-					[46, 39, 39],  // speed, regen
-					[39, 49, 49],  // regen, nano
-					[49, 49, 49],  // nano
-					[40, 40, 40],  // health
-					[40, 41, 41],  // health, high density
-					[41]  // high density
+					[12, 47],  // riot cannon, range
+					[47, 47],  // range
+					[23, 47, 47],  // SLAM, range
+					[40, 44, 36],  // health, damage, drone
+					[37, 37, 40],  // battle drone, health
+					[37, 37, 25],  // battle drone, shield
+					[44, 44, 37],  // damage, battle drone
+					[44, 44, 40],  // damage, health
+					[26, 27, 30],  // area shield, napalm, jammer
+					[46, 46, 46],  // speed
+					[36, 46, 40],  // companion drones, speed, health
+					[40, 40, 46],  // health, speed
+					[41, 49, 39],  // high density, nano, regen
+					[41, 49, 39],  // high density, nano, regen
+					[41, 49, 39],  // high density, nano, regen
+					[41, 49, 39],  // high density, nano, regen
+					[41, 49, 39]  // high density, nano, regen
 				]
 			},
 
@@ -271,7 +276,7 @@
 				"factory": {
 					"factorycloak": [
 						// [<weight>, [<role>, <role>, ...]]
-						[0.8, ["raider", "raider", "builder", "raider", "raider", "builder", "raider", "raider", "raider", "raider"]],
+						[0.8, ["raider", "raider", "raider", "raider", "raider", "builder", "raider", "raider", "raider", "raider"]],
 						[0.2, ["builder", "riot", "builder", "raider", "raider", "raider", "raider"]]
 					],
 					"factorygunship": [
@@ -280,7 +285,7 @@
 					],
 					"factoryamph": [
 						[0.2, ["builder", "riot", "builder", "raider", "raider", "raider", "raider", "raider"]],
-						[0.8, ["builder", "raider", "raider", "raider", "raider", "raider", "builder", "builder", "riot", "raider", "builder", "raider"]]
+						[0.8, ["raider", "raider", "builder", "raider", "raider", "raider", "builder", "builder", "riot", "raider", "builder", "raider"]]
 					],
 					"factoryveh": [
 						[0.1, ["scout", "scout", "scout", "builder", "skirmish", "builder", "skirmish", "skirmish", "skirmish", "scout", "builder", "riot"]],
@@ -291,8 +296,7 @@
 						[0.5, ["builder", "scout", "raider", "raider", "raider", "builder", "scout", "raider", "raider", "skirmish", "builder", "skirmish", "skirmish"]]
 					],
 					"factoryplane": [
-						[0.5, ["anti_air", "builder", "anti_air", "anti_air"]],
-						[0.5, ["anti_air", "builder", "anti_air", "builder"]]
+						[1.0, ["builder"]]
 					],
 					"factorytank": [
 						[0.25, ["riot", "builder", "assault", "builder", "assault", "builder", "builder", "assault"]],
@@ -310,6 +314,10 @@
 					"factoryjump": [
 						[0.5, ["scout", "scout", "scout", "scout", "raider", "raider"]],
 						[0.5, ["scout", "scout", "scout", "scout", "builder", "raider", "raider"]]
+					],
+					"factoryship": [
+						[0.6, ["scout", "raider", "builder"]],
+						[0.4, ["anti_sub", "builder"]]
 					]
 				},
 				"default": ["raider", "raider", "builder"]
@@ -321,10 +329,10 @@
 				"module": [  // List of dynamic module IDs
 					[5, 42],  // beam laser
 					[46, 38],  // cloak, regen
-					[56, 46, 38],  // lightning, speed, regen
+					[19, 46, 38],  // dgun, speed, regen
 					[42, 46, 38],  // health, speed, regen
 					[46, 46, 42],  // speed
-					[29, 30, 49],  // flux, jammer, nano
+					[44, 30, 49],  // damage, jammer, nano
 					[38, 38, 42],  // regen, health
 					[42, 42, 42],  // health
 					[33, 47, 47],  // area cloak, range
@@ -333,9 +341,8 @@
 					[36, 36, 49],  // companion drones, nano
 					[49, 49, 43],  // nano, high density
 					[49, 44, 44],  // nano, damage
-					[44, 44, 44],  // damage
-					[43, 43, 43],  // high density
-					[43]  // high density
+					[44, 44, 43],  // damage, high density
+					[43, 43, 43]  // high density
 				]
 			},
 

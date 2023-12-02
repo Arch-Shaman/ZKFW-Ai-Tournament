@@ -16,17 +16,17 @@
 		"land": {
 			// "<energy_def>": [<lower limit>, <upper limit>]
 			// limit = random(<lower limit>..<upper limit>)
-			"energysingu": [6],
+			"energysingu": [10],
 			"energygeo": [0, 2],
-			"energyfusion": [6, 10],
-			"energywind": [8, 12],
+			"energyfusion": [3],
+			"energywind": [10, 20],
 			"energysolar": [40]
 		},
 		"water": {
 			"energysingu": [1],
 			"energygeo": [0, 2],
-			"energyfusion": [4],
-			"energywind": [20],
+			"energyfusion": [5],
+			"energywind": [30],
 			"energysolar": [8, 12]
 		},
 		// income factor for energy, time is in seconds
